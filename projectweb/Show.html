@@ -1,0 +1,57 @@
+{{ define "Index" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <h1><a href="/">University City Application Form</a></h1>
+      </div>
+      <div class="content">
+        <table border="1">
+          <thead>
+            <tr>
+              <td>National ID</td>
+              <td>Name</td>
+              <td>Gender</td>
+              <td>Adress</td>
+              <td>Religion</td>
+              <td>Faculty</td>
+              <td>GPA</td>
+              <td>Level</td>
+              <td>Phone</td>
+              <td>Father National ID</td>
+              <td>Father name</td>
+              <td>Father Job</td>
+              <td>Father Phone</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range . }}
+            <tr>
+              <td>{{.Ssn}}</td>
+              <td>{{.S_name}}</td>
+              <td>{{.Gender}}</td>
+              <td>{{.adress}}</td>
+              <td>{{.Religion}}</td>
+              <td>{{.Faculty}}</td>
+              <td>{{.Gpa}}</td>
+              <td>{{.S_Level}}</td>
+              <td>{{.phone}}</td>
+              <td>{{.G_ssn}}</td>
+              <td>{{.G_name}}</td>
+              <td>{{.Job}}</td>
+              <td>{{.phone}}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+{{end}}
